@@ -1,3 +1,6 @@
+Hoàn thiện và nộp ảnh Can't Unsee
+Hoàn thiện bài tập AI
+Thực hiện viết Test case
 Dự án: Phân tích dữ liệu điểm số học sinh
 1. Mô tả bài toán
 Chương trình hỗ trợ giáo viên phân tích danh sách điểm số của học sinh, bao gồm:
