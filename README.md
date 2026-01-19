@@ -1,6 +1,6 @@
-Hoàn thiện và nộp ảnh Can't Unsee
-Hoàn thiện bài tập AI
-Thực hiện viết Test case
+Hoàn thiện và nộp ảnh Can't Unsee.
+Hoàn thiện bài tập AI.
+Thực hiện viết Test case.
 Dự án: Phân tích dữ liệu điểm số học sinh
 1. Mô tả bài toán
 Chương trình hỗ trợ giáo viên phân tích danh sách điểm số của học sinh, bao gồm:
@@ -15,3 +15,4 @@ Chương trình hỗ trợ giáo viên phân tích danh sách điểm số của
 -  Mở dự án trong môi trường hỗ trợ Java (VS Code, IntelliJ hoặc Eclipse).
 -  Đảm bảo thư viện JUnit 5 đã được thêm vào classpath.
 -  Chuột phải vào file StudentAnalyzerTest.java và chọn Run Test.
+Hoàn thiện bài tập Kiểm thử hiệu năng với JMeter.
