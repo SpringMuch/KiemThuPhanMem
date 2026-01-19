@@ -12,6 +12,6 @@ Chương trình hỗ trợ giáo viên phân tích danh sách điểm số của
 - Dữ liệu lỗi: Điểm âm hoặc điểm > 10 (phải bị bỏ qua).
 - Danh sách rỗng: Trả về kết quả mặc định là 0.
 3. Hướng dẫn chạy kiểm thử
-1. Mở dự án trong môi trường hỗ trợ Java (VS Code, IntelliJ hoặc Eclipse).
-2. Đảm bảo thư viện JUnit 5 đã được thêm vào classpath.
-3. Chuột phải vào file StudentAnalyzerTest.java và chọn Run Test.
+-  Mở dự án trong môi trường hỗ trợ Java (VS Code, IntelliJ hoặc Eclipse).
+-  Đảm bảo thư viện JUnit 5 đã được thêm vào classpath.
+-  Chuột phải vào file StudentAnalyzerTest.java và chọn Run Test.
