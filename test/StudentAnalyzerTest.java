@@ -21,6 +21,9 @@ public class StudentAnalyzerTest {
         assertEquals(8.166, analyzer.calculateValidAverage(mixedScores), 0.01);
         assertEquals(5.0, analyzer.calculateValidAverage(Arrays.asList(0.0, 10.0)), 0.01);
         assertEquals(0.0, analyzer.calculateValidAverage(Arrays.asList(-5.0, 15.0)));
+        assertEquals(0.0, analyzer.calculateValidAverage(Collections.emptyList()));
+        assertEquals(8.0, analyzer.calculateValidAverage(Arrays.asList(8.0)), 0.01);
+        assertEquals(5.0, analyzer.calculateValidAverage(Arrays.asList(4.0, 6.0)), 0.01);
     }
     @Test
     public void testBoundaryValues() {
