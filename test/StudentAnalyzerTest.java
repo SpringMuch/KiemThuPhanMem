@@ -11,6 +11,7 @@ public class StudentAnalyzerTest {
         List<Double> mixedScores = Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0);
         assertEquals(2, analyzer.countExcellentStudents(mixedScores), "Nên bỏ qua điểm ngoài 0-10");
         assertEquals(0, analyzer.countExcellentStudents(Collections.emptyList()));
+        assertEquals(0, analyzer.countExcellentStudents(Arrays.asList(-1.0, 12.0)));
         assertEquals(3, analyzer.countExcellentStudents(Arrays.asList(8.0, 9.0, 10.0)));
     }
 
@@ -20,5 +21,14 @@ public class StudentAnalyzerTest {
         assertEquals(8.166, analyzer.calculateValidAverage(mixedScores), 0.01);
         assertEquals(5.0, analyzer.calculateValidAverage(Arrays.asList(0.0, 10.0)), 0.01);
         assertEquals(0.0, analyzer.calculateValidAverage(Arrays.asList(-5.0, 15.0)));
+    }
+    @Test
+    public void testBoundaryValues() {
+        List<Double> scores = Arrays.asList(
+            -0.1, 0.0, 0.1,
+            7.99, 8.0, 8.01,
+            9.99, 10.0, 10.1
+        );
+        assertEquals(4, analyzer.countExcellentStudents(scores));
     }
 }
