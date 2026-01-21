@@ -1,28 +1,39 @@
-public class StudentAnalyzer(){
-    public int countExcellentStudents(List<Double> scores){
-        if(scores == null || scores.IsEmpty()){
+import java.util.List;
+
+public class StudentAnalyzer {
+    public int countExcellentStudents(List<Double> scores) {
+        if (scores == null || scores.isEmpty()) {
             return 0;
         }
+
         int count = 0;
-        for(Double scores : scores){
-            if(scores >= 0 && scores <= 10){
+        for (Double score : scores) {
+            if (score == null) {
+                continue;
+            }
+            if (score >= 0 && score <= 10 && score >= 8) {
                 count++;
             }
         }
         return count;
     }
-    public double calculateValidAverage(List<Double> scores){
-        if(scores == null || scores.IsEmpty()){
+
+    public double calculateValidAverage(List<Double> scores) {
+        if (scores == null || scores.isEmpty()) {
             return 0.0;
         }
+
         double sum = 0.0;
         int validCount = 0;
-        for(double scores : scores){
-            if(scores >= 0 && scores <= 10){
-                sum += scores;
+        for (Double score : scores) {
+            if (score == null) {
+                continue;
+            }
+            if (score >= 0 && score <= 10) {
+                sum += score;
                 validCount++;
             }
         }
-        return (validCount == 0) ? 0.0 : sum / validCount; 
+        return validCount == 0 ? 0.0 : sum / validCount;
     }
 }
