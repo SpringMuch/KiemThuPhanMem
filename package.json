@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/SpringMuch/KiemThuPhanMem/issues"
   },
-  "homepage": "https://github.com/SpringMuch/KiemThuPhanMem#readme"
+  "homepage": "https://github.com/SpringMuch/KiemThuPhanMem#readme",
+  "devDependencies": {
+    "cypress": "^15.9.0"
+  }
 }
