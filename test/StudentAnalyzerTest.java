@@ -66,6 +66,17 @@ public class StudentAnalyzerTest {
     }
 
     @Test
+    public void testCountExcellentStudents_NullList() {
+        assertEquals(0, analyzer.countExcellentStudents(null));
+    }
+
+    @Test
+    public void testCalculateValidAverage_ListContainsNull() {
+        List<Double> scores = Arrays.asList(8.0, null, 9.0);
+        assertEquals(8.5, analyzer.calculateValidAverage(scores), 0.01);
+    }
+
+    @Test
     public void testCountExcellentStudents_BoundaryValues() {
         List<Double> scores = Arrays.asList(
             -0.1, 0.0, 0.1,

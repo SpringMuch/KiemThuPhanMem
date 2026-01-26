@@ -11,7 +11,7 @@ public class StudentAnalyzer {
             if (score == null) {
                 continue;
             }
-            if (score >= 0 && score <= 10 && score >= 8) {
+            if (score <= 10 && score >= 8) {
                 count++;
             }
         }

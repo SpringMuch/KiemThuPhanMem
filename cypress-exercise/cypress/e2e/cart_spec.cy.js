@@ -24,4 +24,41 @@ describe('Cart Test', () => {
       .first()
       .should('have.text', '$7.99');
   });
+
+  it('Should remove product from the cart', () => {
+    cy.get('.inventory_item')
+      .first()
+      .find('.btn_inventory')
+      .click();
+
+    cy.get('.shopping_cart_badge')
+      .should('have.text', '1');
+
+    cy.get('.inventory_item')
+      .first()
+      .find('.btn_inventory')
+      .click();
+
+    cy.get('.shopping_cart_badge')
+      .should('not.exist');
+  });
+
+  it('Should proceed to checkout step two successfully', () => {
+    cy.get('.inventory_item')
+      .first()
+      .find('.btn_inventory')
+      .click();
+
+    cy.get('.shopping_cart_link').click();
+
+    cy.get('#checkout').click();
+
+    cy.get('#first-name').type('John');
+    cy.get('#last-name').type('Doe');
+    cy.get('#postal-code').type('12345');
+
+    cy.get('#continue').click();
+
+    cy.url().should('include', '/checkout-step-two.html');
+  });
 });
